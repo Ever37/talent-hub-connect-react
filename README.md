@@ -40,3 +40,7 @@ Note: for this second part, you are allowed to handle state locally, so just add
 Guidelines for part 1 and 2:
 1. This is a productive application, so it's expected you make changes you would do as if you were working in a real environment.
 2. Adapt and create React components using the application in this repository to solve the previous requirements.
+
+
+### NETLIFY
+https://sparkly-naiad-9bbcc1.netlify.app
