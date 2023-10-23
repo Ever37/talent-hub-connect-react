@@ -29,8 +29,7 @@ const CandidateForm = ({
 
   const fetchRejectReasons = async () => {
     try {
-      const response = await axios.get(`
-        ${process.env.REACT_APP_API_URL}:${process.env.REACT_APP_PORT}/candidates/reject-reasons`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/candidates/reject-reasons`);
       setAvailableReasons(response.data);
     } catch (error) {
       console.error('Error getting reject reasons:', error);

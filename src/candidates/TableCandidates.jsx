@@ -72,9 +72,7 @@ const TableCandidatesHead = (props) => {
 
   const fetchCandidateColumns = async () => {
     try {
-      const response = await axios.get(
-        `${process.env.REACT_APP_API_URL}:${process.env.REACT_APP_PORT}/candidates/columns`,
-      );
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/candidates/columns`);
       setHeaders(convertColumnsToHeaders(response.data));
     } catch (error) {
       console.error('Error fetching columns candidates:', error);
@@ -152,8 +150,7 @@ const TableCandidatesToolbar = ({
     try {
       await Promise.all(
         selectedCandidates.map(
-          candidateId => axios.delete(`
-          ${process.env.REACT_APP_API_URL}:${process.env.REACT_APP_PORT}/candidates/${candidateId}`),
+          candidateId => axios.delete(`${process.env.REACT_APP_API_URL}/candidates/${candidateId}`),
         ),
       );
       const candidatesUpdated = candidates.filter(candidate => !selectedCandidates.includes(candidate.id));
@@ -217,8 +214,7 @@ const TableCandidates = ({ visibleColumns }) => {
 
   const fetchCandidates = async () => {
     try {
-      const response = await axios.get(`
-        ${process.env.REACT_APP_API_URL}:${process.env.REACT_APP_PORT}/candidates`);
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/candidates`);
       const candidates = response.data.map(candidate => createData(candidate)) ?? [];
       setRows(candidates);
     } catch (error) {
