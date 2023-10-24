@@ -1,4 +1,5 @@
 import { Card, Container } from '@mui/material';
+import React from 'react';
 
 const NotFound = () => (
   <Container maxWidth="sm">
