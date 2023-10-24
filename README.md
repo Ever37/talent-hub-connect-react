@@ -44,3 +44,6 @@ Guidelines for part 1 and 2:
 
 ### NETLIFY
 https://sparkly-naiad-9bbcc1.netlify.app
+
+Fix _redirects
+https://ridbay.medium.com/react-routing-and-netlify-redirects-fd1f00eeee95
