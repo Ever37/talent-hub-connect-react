@@ -323,6 +323,8 @@ const TableCandidates = ({ visibleColumns }) => {
     setOpenSnackbar(false);
   };
 
+  if (rows.length === 0) return <>Loading</>;
+
   return (
     <Box>
       <Paper sx={{ mt: 1 }}>

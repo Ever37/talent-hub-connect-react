@@ -1,4 +1,4 @@
-import { lazy } from 'react';
+import React, { lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const Welcome = lazy(() => import('./common/Welcome'));

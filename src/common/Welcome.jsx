@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import Lottie from 'react-lottie-player';
 import { useNavigate } from 'react-router-dom';
@@ -23,6 +23,14 @@ const Welcome = () => {
         height: '100vh',
       }}
     >
+      <Typography
+        variant="h4"
+        component="h2"
+        gutterBottom
+        sx={{ color: '#2196F3', fontWeight: 'bold' }}
+      >
+        Talent Hub Connect
+      </Typography>
       <Lottie
         loop
         play

@@ -7,7 +7,7 @@ describe('CandidateForm', () => {
     const mockCandidate = {
       id: '1',
       name: 'John Doe',
-      reason: 'Rejected',
+      reason: 'Ubicación.',
     };
 
     const mockCandidates = [mockCandidate];
@@ -25,14 +25,16 @@ describe('CandidateForm', () => {
     );
 
     expect(screen.getByText('Name y Surname: John Doe')).toBeInTheDocument();
-    expect(screen.getByText('Rejected')).toBeInTheDocument();
+    expect(screen.getByText('Ubicación.')).toBeInTheDocument();
+    expect(screen.getByText('Save')).toBeInTheDocument();
+    expect(screen.getByText('Cancel')).toBeInTheDocument();
   });
 
   it('handle form submit', () => {
     const mockCandidate = {
       id: '1',
       name: 'John Doe',
-      reason: 'Rejected',
+      reason: 'Ubicación.',
     };
 
     const mockCandidates = [mockCandidate];
@@ -56,7 +58,7 @@ describe('CandidateForm', () => {
       expect.arrayContaining([
         expect.objectContaining({
           id: '1',
-          reason: 'Rejected',
+          reason: 'Ubicación.',
         }),
       ]),
     );

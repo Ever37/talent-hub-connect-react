@@ -161,7 +161,7 @@ CandidateForm.propTypes = {
   candidate: PropTypes.object.isRequired,
   candidates: PropTypes.array.isRequired,
   setCandidates: PropTypes.func.isRequired,
-  setOpenSnackbar: PropTypes.func.isRequired,
+  setOpenSnackbar: PropTypes.func,
 };
 
 export default CandidateForm;

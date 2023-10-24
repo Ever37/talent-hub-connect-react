@@ -26,7 +26,7 @@ describe('ColumnChips', () => {
     // label columns
     expect(getByText('Columns')).toBeInTheDocument();
     // some chips
-    expect(getByText('ID')).toBeInTheDocument();
+    expect(getByText('Id')).toBeInTheDocument();
     expect(getByText('Name')).toBeInTheDocument();
     expect(getByText('Document')).toBeInTheDocument();
   });
