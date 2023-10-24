@@ -15,30 +15,44 @@ const Welcome = () => {
   }, [navigate]);
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-      }}
-    >
-      <Typography
-        variant="h4"
-        component="h2"
-        gutterBottom
-        sx={{ color: '#2196F3', fontWeight: 'bold' }}
+    <>
+      <Box
+        data-testid="welcome"
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '30vh',
+          mt: 10,
+        }}
       >
-        Talent Hub Connect
-      </Typography>
-      <Lottie
-        loop
-        play
-        speed={2}
-        animationData={coming}
-        style={{ width: 800, height: 600 }}
-      />
-    </Box>
+        <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          sx={{ color: '#2196F3', fontWeight: 'bold' }}
+        >
+          Talent Hub Connect
+        </Typography>
+      </Box>
+      <Box
+        data-testid="welcome"
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '30vh',
+        }}
+      >
+        <Lottie
+          loop
+          play
+          speed={2}
+          animationData={coming}
+          style={{ width: 800, height: 600 }}
+        />
+      </Box>
+    </>
   );
 };
 
