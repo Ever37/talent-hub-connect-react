@@ -25,8 +25,9 @@ import { visuallyHidden } from '@mui/utils';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import React, { useEffect, useMemo, useState } from 'react';
+import { CircularIndeterminate } from '../common/CircularIndeterminate';
 import { TooltipLabel } from '../common/TooltipLabel';
-import { convertColumnsToHeaders, createData } from '../utils/tools';
+import { convertColumnsToHeaders, createData, isEmpty } from '../utils/tools';
 import CandidateForm from './CandidateForm';
 
 const descendingComparator = (a, b, orderBy) => {
@@ -323,7 +324,7 @@ const TableCandidates = ({ visibleColumns }) => {
     setOpenSnackbar(false);
   };
 
-  if (rows.length === 0) return <>Loading</>;
+  if (isEmpty(rows)) return (<CircularIndeterminate />);
 
   return (
     <Box>

@@ -43,6 +43,28 @@ export function limitString(string, amount) {
 }
 
 /**
+ * Checks if a value is not empty.
+ *
+ * @param {any} v - The value to check.
+ * @returns {boolean} True if the value is not empty, false otherwise.
+ */
+export const isNotEmpty = (v) => {
+  if (v == null || v === '' || Number.isNaN(v) || v === false) return false;
+  const t = typeof v;
+  if (t === 'string' || t === 'number' || t === 'boolean' || t === 'bigint') return true;
+  if (Array.isArray(v)) return v.length > 0;
+  return Object.keys(v).length > 0;
+};
+
+/**
+ * Checks if a value is empty.
+ *
+ * @param {any} v - The value to check.
+ * @returns {boolean} True if the value is empty, false otherwise.
+ */
+export const isEmpty = (v) => !isNotEmpty(v);
+
+/**
  * Creates a data object with specified properties.
  */
 export const createData = ({
